@@ -138,7 +138,7 @@ function pbkdf2($algorithm, $password, $salt, $count, $key_length, $raw_output =
 }
 //mysql information and functions ----------------------------------------------------------------------------------------------
 // Create connection
-$con = mysqli_connect(localhost,"kbindrim_kyle","0kjb1833","kbindrim_beer");
+$con = mysqli_connect(localhost,"user","pass","database_name");
 // Check connection
 if (mysqli_connect_errno($con))
   {

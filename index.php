@@ -21,4 +21,9 @@ include 'view/recipe.php';
 else{
 include 'view/home.php';
 }
+$users = R::dispense( 'USERS' );
+$users->USERNAME = 'Admin';
+$users->PASSWORD = 'root';
+$users->EMAIL = 'email';
+$id = R::store( $users );
 ?>	

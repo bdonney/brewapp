@@ -1,10 +1,8 @@
-<?php error_reporting(0);
-session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Brü Meister</title>
+    <title>Brew App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -89,7 +87,7 @@ session_start(); ?>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="index.php">Brü Meister</a>
+          <a class="brand" href="index.php">Brew App</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
                 <!--<li class="dropdown">

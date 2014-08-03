@@ -6,7 +6,7 @@
 		
 		<div class="jumbotron">
 			<div class="container">
-				<h1>Welcome to Brü Meister</h1>
+				<h1>Welcome to Brew App</h1>
 				<p>Find anything and everything a Brewer needs to run, operate, and exist.</p>
 			</div>
 		</div>

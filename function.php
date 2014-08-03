@@ -138,12 +138,12 @@ function pbkdf2($algorithm, $password, $salt, $count, $key_length, $raw_output =
 }
 //mysql information and functions ----------------------------------------------------------------------------------------------
 // Create connection
-$con = mysqli_connect(localhost,"user","pass","database_name");
+//$con = mysqli_connect(localhost,"user","pass","database_name");
 // Check connection
-if (mysqli_connect_errno($con))
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+//if (mysqli_connect_errno($con))
+//  {
+//  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+//  }
   function UserCheck($Username, $Email){
 	global $con;
 	$sql1 = "SELECT USERNAME FROM USERS WHERE USERNAME='$Username'";
@@ -163,10 +163,15 @@ if (mysqli_connect_errno($con))
 		return False;}
   }
   function Create_User($Username, $Password, $Email){
-  global $con;
+  /*global $con
 	$sql = "INSERT INTO `USERS` (`USERNAME`, `PASSWORD`, `EMAIL`) VALUES ('$Username', '$Password', '$Email')";
 	mysqli_query($con, $sql);
-	mysqli_close($con);
+	mysqli_close($con); */
+      $users = R::dispense( 'USERS' );
+      $users->USERNAME = $Username;
+      $users->PASSWORD = $Password;
+      $users->EMAIL = $Email;
+      $id = R::store( $users );
 	return True;
   }
    function Login_Check($Username, $Password){

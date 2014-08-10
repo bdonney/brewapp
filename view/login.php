@@ -13,7 +13,7 @@ If($_GET['signup']==1){
 	<body>
 	<div class="container">
 <?php echo 
-	"<form name=\"form\" method=\"post\" action=\"controller/checkin.php?signup=1\">
+"<form name=\"form\" method=\"post\" action=\"controller/checkin.php?signup=1\">
 <p><table cellpadding=\"10\"><tr><td>Create Username: </td><td>
 <input type=\"text\" name=\"newun\" size=50 value=".$_POST['newun']."></td></tr>
 <tr><td>Create Password: </td><td>
@@ -31,6 +31,7 @@ If($_GET['signup']==1){
 <input type=\"text\" name=\"verify\" size=50></td></tr><tr><td></td><td>
 <input class=\"btn btn-primary\" type=\"submit\" name=\"Submit\" value=\" Sign Up \"></td></table>
 </p>";
+
 }
 else {
 echo "<form name=\"form\" method=\"post\" action=\"controller/checkin.php\">

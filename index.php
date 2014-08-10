@@ -8,7 +8,7 @@ include_once 'function.php';
 include_once 'controller/controller.php';
 include_once 'model/model.php';
 //  FOR TESTING LOGGIN ROUTER
-$_SESSION['ID'] = 1;
+$_SESSION['ID'] = null;
 
 R::setup($config['dsn'],$config['dbuser'],$config['dbpass']);
 

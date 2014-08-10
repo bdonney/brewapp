@@ -5,8 +5,8 @@ session_start();
 require 'redbean/rb.php';
 require 'config/config.php';
 include_once 'function.php';
-include_once 'controller/controller.php';
 include_once 'model/model.php';
+include_once 'controller/controller.php';
 //  FOR TESTING LOGGIN ROUTER
 $_SESSION['ID'] = null;
 

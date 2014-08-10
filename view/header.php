@@ -62,11 +62,11 @@
             </div>
             <div class="modal-body">
                 <form method="post" action="controller/checkin.php">
-                    <p><table cellpadding="10"><tr><td><h5>Username: </h5></td><td>
+                    <table cellpadding="10"><tr><td><h5>Username: </h5></td><td>
                                 <input type="text" name="username" size=50></td></tr>
                         <tr><td><h5>Password: </h5></td><td>
                                 <input type="password" name="pwd" size=50></td></tr>
-                    </table></p>
+                    </table>
                     <!-- <form method="post" action="index.php?action=note/create">
                         <textarea name="note" class="form-control" rows="3" style="width: 90%"
                                   placeholder="Be as descriptive as possible with your request.  Include your name!"></textarea> -->
@@ -145,7 +145,10 @@
                 </ul>
                 <ul class="pull-right nav">
                     <!------------ INSERT MY MENU ITEMS THAT CHANGE WHEN LOGGED IN --------------->
-                    <?php $header = new header(); echo $header->menu[1]; echo $header->menu[0]; ?>
+                    <?php
+                        echo $header->menu[1];
+                        echo $header->menu[0];
+                    ?>
 
                 </ul>
             </div><!--/.nav-collapse -->

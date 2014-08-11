@@ -212,5 +212,45 @@ define("HASH_PBKDF2_INDEX", 3); */
     }
 }
 class create_user{
+    private $username;
+    private $password;
+    private $email;
 
+    public function __construct($username, $password, $email){
+        if(UserCheck($username, $password)){
+            Add_User($username, $password, $email);
+        }
+
+    }
+
+    private function UserCheck($Username, $Email){
+    global $con;
+    $sql1 = "SELECT USERNAME FROM USERS WHERE USERNAME='$Username'";
+    $db1 = mysqli_query($con, $sql1);
+    while ($data = mysqli_fetch_array($db1)) {
+        $return1[] = $data; //Passes entries into return array
+    }
+    $sql2 = "SELECT EMAIL FROM USERS WHERE EMAIL='$Email'";
+    $db2 = mysqli_query($con, $sql2);
+    while ($data = mysqli_fetch_array($db2)) {
+        $return2[] = $data; //Passes entries into return array
+        mysqli_close($con);
+    }
+    If ($return1 == null AND $return2 == null){
+        return True;}
+    Else {
+        return False;}
+}
+    private function Add_User($Username, $Password, $Email){
+        /*global $con
+          $sql = "INSERT INTO `USERS` (`USERNAME`, `PASSWORD`, `EMAIL`) VALUES ('$Username', '$Password', '$Email')";
+          mysqli_query($con, $sql);
+          mysqli_close($con); */
+        $users = R::dispense( 'users' );
+        $users->USERNAME = $Username;
+        $users->PASSWORD = $Password;
+        $users->EMAIL = $Email;
+        $id = R::store( $users );
+        return True;
+    }
 }
